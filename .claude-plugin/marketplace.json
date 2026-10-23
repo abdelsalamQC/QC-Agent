@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "abdelsalamqc-plugins",
+  "description": "abdelsalamQC's Claude Code plugins — AgenTeX agentic QA.",
+  "owner": { "name": "abdelsalamQC" },
+  "plugins": [
+    {
+      "name": "agentex",
+      "source": "./",
+      "description": "Agentic QA for Claude Code: plans and runs your tests with evidence, a defect report and an HTML dashboard.",
+      "version": "0.27.0"
+    }
+  ]
+}
