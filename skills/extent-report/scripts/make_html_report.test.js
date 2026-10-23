@@ -387,7 +387,7 @@ test('v2: gate pin — verifyReports holds ok:true over the enriched markup (nam
 
 // ---------------------------------------------------------------------------
 // Verdict banner, pass rate, per-card step counts, "Issues only" and print styles
-// (ideas harvested from community PR #6). The banner must agree with the CI gate's
+// The banner must agree with the CI gate's
 // own mapping (test-execution/scripts/write_verdict.js), never a second opinion.
 // ---------------------------------------------------------------------------
 

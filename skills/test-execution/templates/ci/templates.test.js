@@ -94,7 +94,7 @@ for (const [label, file] of [['azure-pipelines.yml', AZ], ['github-actions.yml',
 
   test(`${label}: generic — placeholders only, no consumer/org/project names`, () => {
     const src = read(file);
-    assert.ok(!/dnlds|elgazzar|melgazzar/i.test(src), 'no author/consumer identifiers');
+    assert.ok(!/dnlds|abdelsalam/i.test(src), 'no author/consumer identifiers');
     assert.match(src, /<[a-z-]+>/, 'angle-bracket placeholders mark every consumer-specific value');
     for (const m of src.matchAll(/@([a-z0-9.-]+\.[a-z]{2,})/gi)) {
       assert.strictEqual(m[1].toLowerCase(), 'example.com', `emails must use example.com, got @${m[1]}`);
@@ -118,7 +118,7 @@ test('github-actions.yml: PM approval via an environment with required reviewers
 
 test('ci-settings.json is generic too', () => {
   const src = read(SETTINGS);
-  assert.ok(!/dnlds|elgazzar|melgazzar/i.test(src));
+  assert.ok(!/dnlds|abdelsalam/i.test(src));
   assert.ok(!src.includes('plugins/cache'));
 });
 
