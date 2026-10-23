@@ -7,7 +7,7 @@ common reason a PR needs a revision.
 
 ## Workflow
 
-1. **Fork** `MhmdElGazzar/agentex` and branch off `main`.
+1. **Fork** `abdelsalamQC/QC-Agent` and branch off `main`.
 2. **Build your change** following the patterns in [Architecture](./architecture.md) and the
    worked example in [Adding a Skill](./adding-a-skill.md).
 3. **Run script tests** for anything you touched or added — see [Testing](./testing.md).
@@ -34,8 +34,9 @@ common reason a PR needs a revision.
 ## After merge
 
 The maintainer commits releases straight to `main` and bumps the version in
-`.claude-plugin/plugin.json` + `CHANGELOG.md`; the `elgazzar-plugins` marketplace listing is
-re-synced on each release. You don't need to do either of these in your PR.
+`.claude-plugin/plugin.json`, the `abdelsalamqc-plugins` listing in
+`.claude-plugin/marketplace.json` (the two versions must match) and `CHANGELOG.md`. You don't
+need to do either of these in your PR.
 
 Every push to `main` also rebuilds one generated branch per host: `store` (the Claude plugin
 directory), `copilot`, `devin` and `codex`. Write `main` the Claude way and never commit to a

@@ -24,8 +24,8 @@ project `CLAUDE.md` or a local skill, not a plugin.
 /plugin install <name>@<marketplace>
 ```
 
-**Example:** AgenTeX itself — `/plugin marketplace add MhmdElGazzar/elgazzar-plugins` then
-`/plugin install agentex@elgazzar-plugins`.
+**Example:** AgenTeX itself — `/plugin marketplace add abdelsalamQC/QC-Agent` then
+`/plugin install agentex@abdelsalamqc-plugins`.
 
 **Pros and cons:**
 - Shareable, versioned, one-command install

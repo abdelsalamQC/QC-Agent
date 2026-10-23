@@ -17,22 +17,22 @@ Each generated branch is its own marketplace, so it installs straight from this 
 
 **GitHub Copilot CLI**
 ```
-copilot plugin marketplace add MhmdElGazzar/agentex#copilot
+copilot plugin marketplace add abdelsalamQC/QC-Agent#copilot
 copilot plugin install agentex@agentex-copilot
 ```
-Fallback: `git clone -b copilot https://github.com/MhmdElGazzar/agentex.git agentex-copilot`,
+Fallback: `git clone -b copilot https://github.com/abdelsalamQC/QC-Agent.git agentex-copilot`,
 then `copilot plugin install ./agentex-copilot`. Update with
 `copilot plugin marketplace update agentex-copilot` and `copilot plugin update agentex`.
 
 **OpenAI Codex**
 ```
-codex plugin marketplace add MhmdElGazzar/agentex --ref codex
+codex plugin marketplace add abdelsalamQC/QC-Agent --ref codex
 ```
 Then open the ChatGPT desktop app (Codex), go to the Plugins Directory, pick **AgenTeX**
 and install it. The Codex CLI only adds marketplaces; installing happens in the app. Update with
 `codex plugin marketplace upgrade agentex-codex`.
 
-**Devin**: add `{"source": "github", "repo": "MhmdElGazzar/agentex", "ref": "devin"}` to
+**Devin**: add `{"source": "github", "repo": "abdelsalamQC/QC-Agent", "ref": "devin"}` to
 `requiredPlugins` in `.devin/config.json`.
 
 ## What this means when you change `main`

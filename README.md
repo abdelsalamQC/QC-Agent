@@ -22,8 +22,8 @@ New here? **[Getting Started](./docs/getting-started.md)** walks you through ins
 → `/init-test` → permissions → first run. The short version:
 
 ```
-/plugin marketplace add MhmdElGazzar/elgazzar-plugins
-/plugin install agentex@elgazzar-plugins
+/plugin marketplace add abdelsalamQC/QC-Agent
+/plugin install agentex@abdelsalamqc-plugins
 /init-test
 /execute-test https://example.com
 ```
@@ -184,17 +184,11 @@ Every run writes to a timestamped `executions/execu_<timestamp>/` folder — `re
 
 New to the codebase? **[docs/contributing/](./docs/contributing/README.md)** teaches Claude
 Code concepts from zero, AgenTeX's architecture, and walks through adding a skill end to end.
-Open issues and PRs on the [GitHub repository](https://github.com/MhmdElGazzar/agentex).
+Open issues and PRs on the [GitHub repository](https://github.com/abdelsalamQC/QC-Agent).
 
 ## Contributors
 
-- **Mohamed Elgazzar** — creator & maintainer
-- **Marwah Zain**
-- [**@mabdel130**](https://github.com/mabdel130) — `extent-report` skill (PR #1)
-- [**@YoussefAbdellah2023**](https://github.com/YoussefAbdellah2023) — `extent-report` v2/v3, Jira and Figma integration work (PRs #5, #6, #7, #8, #11, #13, #14)
-- **Hager-Helmy**
-- [**@MahmoudElSharkawy**](https://github.com/MahmoudElSharkawy) — annotated screenshots on filed Azure bugs (PR #20)
-- [**@abdo-mohamed-ezzat**](https://github.com/abdo-mohamed-ezzat) — session login reuse (PR #17), multi-context flows RFC (#18)
+- [**@abdelsalamQC**](https://github.com/abdelsalamQC) — creator & maintainer
 
 ## License
 
