@@ -22,7 +22,7 @@ New here? **[Getting Started](./docs/getting-started.md)** walks you through ins
 → `/init-test` → permissions → first run. The short version:
 
 ```
-/plugin marketplace add abdelsalamQC/abdelsalamqc-plugins
+/plugin marketplace add abdelsalamQC/QC-Agent
 /plugin install agentex@abdelsalamqc-plugins
 /init-test
 /execute-test https://example.com
@@ -184,7 +184,7 @@ Every run writes to a timestamped `executions/execu_<timestamp>/` folder — `re
 
 New to the codebase? **[docs/contributing/](./docs/contributing/README.md)** teaches Claude
 Code concepts from zero, AgenTeX's architecture, and walks through adding a skill end to end.
-Open issues and PRs on the [GitHub repository](https://github.com/abdelsalamQC/agentex).
+Open issues and PRs on the [GitHub repository](https://github.com/abdelsalamQC/QC-Agent).
 
 ## Contributors
 

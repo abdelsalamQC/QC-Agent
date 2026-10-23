@@ -24,7 +24,7 @@ project `CLAUDE.md` or a local skill, not a plugin.
 /plugin install <name>@<marketplace>
 ```
 
-**Example:** AgenTeX itself — `/plugin marketplace add abdelsalamQC/abdelsalamqc-plugins` then
+**Example:** AgenTeX itself — `/plugin marketplace add abdelsalamQC/QC-Agent` then
 `/plugin install agentex@abdelsalamqc-plugins`.
 
 **Pros and cons:**
