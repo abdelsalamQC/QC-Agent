@@ -21,7 +21,6 @@
 // value despite the cache, consumers call liveFieldMap() for the real current
 // options (no error-prose parsing, no cache write, no auto-retry) and surface
 // them with cacheStale: true; the refresh stays the user's call.
-// List-picklist semantics credit: plugin PR #16's workItemTypeFields (harvested).
 const fs = require('node:fs');
 const path = require('node:path');
 

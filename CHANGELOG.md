@@ -210,8 +210,7 @@ All notable changes to AgenTeX are documented here.
   The first build of a new plugin version tags `<host>-v<version>` for stores that pin a tag
   or sha. How to write `main` so every host builds: `docs/contributing/host-branches.md`.
   Covered by `scripts/hosts/{transforms,guards,build_host}.test.js`, including a check that
-  every host builds cleanly from the repo's HEAD. Thanks to @mabdel130, whose PR #30 surfaced
-  the `.gitattributes` validation failure.
+  every host builds cleanly from the repo's HEAD.
 - **`endpoint-testing` skill** — standalone API test run over cataloged endpoints ("api-tests"),
   independent of any browser test spec (the "Standalone API tests" row flips from planned to
   available). New `integration/api_test_suites/**/*_suite.json` case files reference a sibling
@@ -358,8 +357,7 @@ All notable changes to AgenTeX are documented here.
   for secrets, left the step BLOCKED with "not set". These names now resolve like every other
   secret, from the environment and then `.env`, and the BLOCKED reason names both places.
   The curl fallback in `references/api-requests.md` loads `.env` the same way. Covered by
-  three new cases in `run_api.test.js`. Thanks to @MarwahZain, whose PR #9 flagged the
-  inconsistent `API_TOKEN` handling (closed with credit, not merged).
+  three new cases in `run_api.test.js`.
 - **An imported API catalog calls its own service.** `run_api.js` let the active environment's
   `api` block win over every catalog, its token replacing any catalog auth as
   `Authorization: Bearer` — right for the project's own hand-written catalogs, wrong for one
@@ -416,31 +414,6 @@ All notable changes to AgenTeX are documented here.
   landed in a folder the codex host forbids (its manifest moves to `.codex-plugin/`), so every
   codex build failed its `forbiddenPaths` guard and `build_host.test.js` went red on `main`.
   `hosts/codex/host.json` now excludes the icon; the other hosts keep it.
-
-### Credits
-- The multi-host direction, and the host knowledge behind the Copilot and Codex branches
-  (entry points, native subagent coordination, a certification checklist), came from
-  community **PR #22** and its split into **#27/#28/#29** by @MohamedAbdella. The branches are
-  generated from `main` instead of carrying host files on `main`, so no code was lifted; the
-  ideas were.
-- The extent report's verdict banner, pass rate, "Issues only" filter, per-card step counts
-  and print styles were harvested from community **PR #6** by @YoussefAbdellah2023. Its
-  parallel v2/v3 generator files were not adopted: they forked the pre-`schemaVersion: 2`
-  renderer and lacked flaky / warning / view-mismatch statuses, timing, evidence and defects,
-  so the ideas were rebuilt inside `make_html_report.js` instead. Closed with credit, not
-  merged.
-- Standalone API suites and Swagger/OpenAPI import were contributed by @MarwahZain in
-  community **PR #10** (merged via #25), mobile testing through Appium by @mabdel130 in
-  **PR #15** (merged via #24), and annotated bug screenshots by @MahmoudElSharkawy in
-  **PR #20**. Post-merge review hardened all three before release; the changes are folded
-  into the entries above.
-- The ADO error-path PAT scrub, the work-item ID and `azure.org` checks and the attachment
-  byte custody were harvested from community **PR #27** by @MohamedAbdella and rebuilt in
-  house style. The ID check was narrowed to requests actually sent, because the PR's version
-  also refused the dry-run stand-ins the bug flow plans with. Its bug-write receipts and
-  ledger, approved-plan digest, update lock and migrate preflight, strict version stamps,
-  `scaffold.js`/`init.js` changes and host-neutral execution-result contract were not
-  adopted (regressions found in review, or no caller yet). Closed with credit, not merged.
 
 ## [0.23.0] — 2026-10-09
 ### Added
@@ -556,17 +529,6 @@ All notable changes to AgenTeX are documented here.
 - Task estimation's script now routes Azure DevOps and Jira through per-provider
   estimation strategies behind a fail-closed registry. The change is internal, and output
   is byte-identical on both trackers.
-
-### Credits
-- The Jira operation semantics and field mappings were harvested from community **PR #4** by @mabdel130 ([Testing] task → Sub-task with parent;
-  `Activity=Testing` → label `testing`; `OriginalEstimate`/`RemainingWork` →
-  `timetracking.originalEstimate`/`remainingEstimate`; Story Points as a site-specific
-  custom field confirmed once per project, never guessed; the configurable bug→story link
-  type; the `.agentex/test-template.md` Jira-section pin) and **PR #11** by @YoussefAbdellah2023 (verification
-  that `parent` works only for sub-task types; the sub-task-with-text-steps artifact model
-  offered by `/design-test`'s artifact ask). Their acli/CLI transport approach was not
-  adopted (CLI dependency, no attachment upload, no custom-field writes) — no code was
-  lifted; the semantics were. Both PRs were closed with credit, not merged.
 
 ## [0.22.1] — 2026-10-03
 ### Fixed
@@ -943,15 +905,6 @@ All notable changes to AgenTeX are documented here.
   severity/priority tables) and the old az-based `testplan.js` — superseded by
   `scripts/lib/tracker/` and the rebuilt scripts. No `az` invocation remains anywhere in
   the bug-filing surface.
-
-### Credits
-- Pattern harvest from **PR #16** (closed with credit, not merged): the `validateOnly`
-  create pattern, the `uploadAttachmentBinary` and `patchWorkItem` fetch shapes, the
-  `resolvePat` pattern (env order inverted to put the scaffolded `AZURE_PAT` first), the
-  ledger's done/not-done messages, and the list-picklist semantics that became the
-  field-cache builder.
-- **PR #4** and **PR #11** (closed with credit, not merged): Jira operation semantics and
-  field mappings, recorded as design input for the Phase-3 Jira adapter.
 
 ## [0.18.0] — 2026-08-25
 ### Added
@@ -1477,7 +1430,7 @@ All notable changes to AgenTeX are documented here.
 ## [0.4.0] — 2026-07-14
 
 ### Added
-- **`extent-report` skill** (contributed by @mabdel130, PR #1) — turns a finished run's results
+- **`extent-report` skill** — turns a finished run's results
   into a standalone interactive `extent-report.html` dashboard (dark theme, donut chart,
   per-status stat cards, expandable per-test-case steps) next to `report.md`, generated by
   `scripts/make_html_report.js`.

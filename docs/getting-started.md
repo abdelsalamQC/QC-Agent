@@ -5,16 +5,16 @@ assumes you already know how to type a request and approve an action.
 
 ## 1. Install the plugin
 
-AgenTeX installs through the **`elgazzar-plugins`** marketplace. From Claude Code:
+AgenTeX installs through the **`abdelsalamqc-plugins`** marketplace. From Claude Code:
 
 ```
-/plugin marketplace add MhmdElGazzar/elgazzar-plugins
-/plugin install agentex@elgazzar-plugins
+/plugin marketplace add abdelsalamQC/QC-Agent
+/plugin install agentex@abdelsalamqc-plugins
 ```
 
-> **Developing against a local clone?** Point the marketplace at your local copy of the
-> `elgazzar-plugins` repo (the one containing `.claude-plugin/marketplace.json`) instead of GitHub:
-> `/plugin marketplace add /path/to/elgazzar-plugins`, then install the same way.
+> **Developing against a local clone?** Point the marketplace at your local `QC-Agent`
+> clone (it contains `.claude-plugin/marketplace.json`) instead of GitHub:
+> `/plugin marketplace add /path/to/QC-Agent`, then install the same way.
 
 > **Updating later?** A plugin update changes the plugin, not your project. After
 > updating, run `/update-agentex` in each project to migrate its scaffolded files to
@@ -81,8 +81,8 @@ executions/execu_<timestamp>/
 
 ## Quick reference
 
-- Install: `/plugin marketplace add MhmdElGazzar/elgazzar-plugins` then
-  `/plugin install agentex@elgazzar-plugins`
+- Install: `/plugin marketplace add abdelsalamQC/QC-Agent` then
+  `/plugin install agentex@abdelsalamqc-plugins`
 - Browser driver: `npm install -D @playwright/cli && npx playwright-cli install-browser chromium`
 - Scaffold: `/init-test`
 - Permissions: copy the `permissions` block from [`settings.example.json`](../settings.example.json)

@@ -357,7 +357,7 @@ function toggleTC(i) {
       </div>`;
   }
 
-  // ---- verdict banner (idea harvested from community PR #6) ----
+  // ---- verdict banner ----
   // The SAME mapping and policy as the CI gate (test-execution's write_verdict.js), so
   // the dashboard can never read PASSED while verdict.json says FAIL. Run-level reasons
   // (needs-user, timeout, …) reach only verdict.json, which stays authoritative.
